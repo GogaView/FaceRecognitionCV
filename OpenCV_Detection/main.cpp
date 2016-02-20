@@ -1,15 +1,36 @@
-//
-//  main.cpp
-//  OpenCV_Detection
-//
-//  Created by MacBook on 18.02.16.
-//  Copyright (c) 2016 kosa. All rights reserved.
-//
+#include <opencv2/objdetect/objdetect.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <opencv2/imgproc/imgproc.hpp>
 
 #include <iostream>
+#include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+#include <unistd.h>
+#include "FaceRecognition.h"
+
+using namespace std;
+using namespace cv;
+
+int main( int argc, const char** argv )
+{
+    CFaceRecognition* face = new CFaceRecognition();
+    
+    if(face->isValid())
+    {
+        cv::Mat frame;
+        
+        while(true)
+        {
+            frame = face->getFrame();
+            cv::imshow("face",frame);
+            
+//            usleep(1000000);
+            char key = (char) waitKey(1);
+            if(key == 27)
+                break;
+            
+        }
+    }
+    
+    
 }

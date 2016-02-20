@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FAFE02421C76396C006F0EA8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAFE02411C76396C006F0EA8 /* main.cpp */; };
+		FAFE024C1C78A53D006F0EA8 /* FaceRecognition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAFE024A1C78A53D006F0EA8 /* FaceRecognition.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		FAFE023E1C76396C006F0EA8 /* OpenCV_Detection */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenCV_Detection; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAFE02411C76396C006F0EA8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		FAFE024A1C78A53D006F0EA8 /* FaceRecognition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceRecognition.cpp; sourceTree = "<group>"; };
+		FAFE024B1C78A53D006F0EA8 /* FaceRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceRecognition.h; sourceTree = "<group>"; };
+		FAFE024D1C78A8F9006F0EA8 /* recognition_consts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = recognition_consts.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,9 @@
 			isa = PBXGroup;
 			children = (
 				FAFE02411C76396C006F0EA8 /* main.cpp */,
+				FAFE024A1C78A53D006F0EA8 /* FaceRecognition.cpp */,
+				FAFE024B1C78A53D006F0EA8 /* FaceRecognition.h */,
+				FAFE024D1C78A8F9006F0EA8 /* recognition_consts.h */,
 			);
 			path = OpenCV_Detection;
 			sourceTree = "<group>";
@@ -118,6 +125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAFE024C1C78A53D006F0EA8 /* FaceRecognition.cpp in Sources */,
 				FAFE02421C76396C006F0EA8 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,6 +213,22 @@
 		FAFE02461C76396C006F0EA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lopencv_video",
+					"-lopencv_ml",
+					"-lopencv_imgproc",
+					"-lopencv_highgui",
+					"-lopencv_core",
+					"-lopencv_legacy",
+					"-lopencv_contrib",
+					"-lopencv_objdetect",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -212,6 +236,22 @@
 		FAFE02471C76396C006F0EA8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/include,
+				);
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				OTHER_LDFLAGS = (
+					"-lopencv_video",
+					"-lopencv_ml",
+					"-lopencv_imgproc",
+					"-lopencv_highgui",
+					"-lopencv_core",
+					"-lopencv_legacy",
+					"-lopencv_contrib",
+					"-lopencv_objdetect",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
