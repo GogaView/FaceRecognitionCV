@@ -14,8 +14,8 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FAFE023D1C76396C006F0EA8"
-               BuildableName = "OpenCV_Detection"
+               BlueprintIdentifier = "D9FD5C4F30E0401B396AEC1A"
+               BuildableName = "OpenCV_Detection.app"
                BlueprintName = "OpenCV_Detection"
                ReferencedContainer = "container:OpenCV_Detection.xcodeproj">
             </BuildableReference>
@@ -32,8 +32,8 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FAFE023D1C76396C006F0EA8"
-            BuildableName = "OpenCV_Detection"
+            BlueprintIdentifier = "D9FD5C4F30E0401B396AEC1A"
+            BuildableName = "OpenCV_Detection.app"
             BlueprintName = "OpenCV_Detection"
             ReferencedContainer = "container:OpenCV_Detection.xcodeproj">
          </BuildableReference>
@@ -52,8 +52,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FAFE023D1C76396C006F0EA8"
-            BuildableName = "OpenCV_Detection"
+            BlueprintIdentifier = "D9FD5C4F30E0401B396AEC1A"
+            BuildableName = "OpenCV_Detection.app"
             BlueprintName = "OpenCV_Detection"
             ReferencedContainer = "container:OpenCV_Detection.xcodeproj">
          </BuildableReference>
@@ -71,8 +71,8 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FAFE023D1C76396C006F0EA8"
-            BuildableName = "OpenCV_Detection"
+            BlueprintIdentifier = "D9FD5C4F30E0401B396AEC1A"
+            BuildableName = "OpenCV_Detection.app"
             BlueprintName = "OpenCV_Detection"
             ReferencedContainer = "container:OpenCV_Detection.xcodeproj">
          </BuildableReference>

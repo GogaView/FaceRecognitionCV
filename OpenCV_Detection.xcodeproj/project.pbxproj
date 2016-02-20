@@ -7,78 +7,152 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FAFE02421C76396C006F0EA8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAFE02411C76396C006F0EA8 /* main.cpp */; };
-		FAFE024C1C78A53D006F0EA8 /* FaceRecognition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAFE024A1C78A53D006F0EA8 /* FaceRecognition.cpp */; };
+		55ACC9EC74653AC16EAE3C40 /* opencv_imgproc in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = C500203842ABE733DB4FA76B /* opencv_imgproc */; };
+		6515B3DE9CDF5FB12F645687 /* opencv_legacy in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 6CDF004B54E38EE11A292175 /* opencv_legacy */; };
+		77CD26813E66E1FC8559DFEF /* opencv_ml in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 4CFF30FEDCD1214AA7921ECF /* opencv_ml */; };
+		809159C6EAF8D43A43D6969D /* QtCore.framework in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 2E20BC4F5FF362AB89A06A6D /* QtCore.framework */; };
+		85FC8D09BBB106D791FCA6BE /* FaceRecognition.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 7FB9E2034970538C88275B3B /* FaceRecognition.cpp */; settings = {ATTRIBUTES = (); }; };
+		AE73BC76B57E7449232702F5 /* opencv_objdetect in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 2A293A6EA9A01ABD7DAD0007 /* opencv_objdetect */; };
+		B493DD56F733EB1FA0B0440D /* opencv_highgui in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 7E730E135A848A0FEAADCD9D /* opencv_highgui */; };
+		B99AF0048348316D5371D2F8 /* opencv_core in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 8460E7A556CA32E346510BD9 /* opencv_core */; };
+		CBF78B51BD9AFF189ACA7357 /* opencv_contrib in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 804CEC106B49DAA2A684BE06 /* opencv_contrib */; };
+		CD0831BA12A8B4D8C862CC37 /* opencv_video in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 2C39EA5F4C3EE3134F679991 /* opencv_video */; };
+		EF6645BB4C47FA0A6FC47A21 /* QtGui.framework in Frameworks & Libraries */ = {isa = PBXBuildFile; fileRef = 118895110D9257AE43028713 /* QtGui.framework */; };
+		FD1638E377D97C82BDB438FB /* main.cpp in Build Sources */ = {isa = PBXBuildFile; fileRef = 7EC3C68A81EFFF79B6CA22AC /* main.cpp */; settings = {ATTRIBUTES = (); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		FAFE023C1C76396C006F0EA8 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		FAFE023E1C76396C006F0EA8 /* OpenCV_Detection */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenCV_Detection; sourceTree = BUILT_PRODUCTS_DIR; };
-		FAFE02411C76396C006F0EA8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		FAFE024A1C78A53D006F0EA8 /* FaceRecognition.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FaceRecognition.cpp; sourceTree = "<group>"; };
-		FAFE024B1C78A53D006F0EA8 /* FaceRecognition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FaceRecognition.h; sourceTree = "<group>"; };
-		FAFE024D1C78A8F9006F0EA8 /* recognition_consts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = recognition_consts.h; sourceTree = "<group>"; };
+		118895110D9257AE43028713 /* QtGui.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtGui.framework; path = /usr/local/Cellar/qt/4.8.7/lib/QtGui.framework; sourceTree = "<absolute>"; };
+		2A293A6EA9A01ABD7DAD0007 /* opencv_objdetect */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = opencv_objdetect; path = /usr/local/Cellar/opencv/2.4.12_2/lib/libopencv_objdetect.2.4.12.dylib; sourceTree = "<absolute>"; };
+		2C39EA5F4C3EE3134F679991 /* opencv_video */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = opencv_video; path = /usr/local/Cellar/opencv/2.4.12_2/lib/libopencv_video.2.4.12.dylib; sourceTree = "<absolute>"; };
+		2E20BC4F5FF362AB89A06A6D /* QtCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QtCore.framework; path = /usr/local/Cellar/qt/4.8.7/lib/QtCore.framework; sourceTree = "<absolute>"; };
+		4CFF30FEDCD1214AA7921ECF /* opencv_ml */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = opencv_ml; path = /usr/local/Cellar/opencv/2.4.12_2/lib/libopencv_ml.2.4.12.dylib; sourceTree = "<absolute>"; };
+		563E201091E9BB50D5B53897 /* FaceRecognition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FaceRecognition.h; path = src/FaceRecognition.h; sourceTree = SOURCE_ROOT; };
+		6B6729C1C05203E7A6B57F81 /* recognition_consts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = recognition_consts.h; path = src/recognition_consts.h; sourceTree = SOURCE_ROOT; };
+		6CDF004B54E38EE11A292175 /* opencv_legacy */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = opencv_legacy; path = /usr/local/Cellar/opencv/2.4.12_2/lib/libopencv_legacy.2.4.12.dylib; sourceTree = "<absolute>"; };
+		7E730E135A848A0FEAADCD9D /* opencv_highgui */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = opencv_highgui; path = /usr/local/Cellar/opencv/2.4.12_2/lib/libopencv_highgui.2.4.12.dylib; sourceTree = "<absolute>"; };
+		7EC3C68A81EFFF79B6CA22AC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		7FB9E2034970538C88275B3B /* FaceRecognition.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FaceRecognition.cpp; path = src/FaceRecognition.cpp; sourceTree = SOURCE_ROOT; };
+		804CEC106B49DAA2A684BE06 /* opencv_contrib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = opencv_contrib; path = /usr/local/Cellar/opencv/2.4.12_2/lib/libopencv_contrib.2.4.12.dylib; sourceTree = "<absolute>"; };
+		8460E7A556CA32E346510BD9 /* opencv_core */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = opencv_core; path = /usr/local/Cellar/opencv/2.4.12_2/lib/libopencv_core.2.4.12.dylib; sourceTree = "<absolute>"; };
+		C500203842ABE733DB4FA76B /* opencv_imgproc */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = opencv_imgproc; path = /usr/local/Cellar/opencv/2.4.12_2/lib/libopencv_imgproc.2.4.12.dylib; sourceTree = "<absolute>"; };
+		E62CB88424349B45F7C12396 /* OpenCV_Detection.pro */ = {isa = PBXFileReference; lastKnownFileType = text; path = OpenCV_Detection.pro; sourceTree = SOURCE_ROOT; };
+		FAFE02621C78F137006F0EA8 /* OpenCV_Detection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenCV_Detection.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		FAFE023B1C76396C006F0EA8 /* Frameworks */ = {
+		2A1043669E6E5A7426EA502A /* Frameworks & Libraries */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0831BA12A8B4D8C862CC37 /* opencv_video in Frameworks & Libraries */,
+				77CD26813E66E1FC8559DFEF /* opencv_ml in Frameworks & Libraries */,
+				55ACC9EC74653AC16EAE3C40 /* opencv_imgproc in Frameworks & Libraries */,
+				B493DD56F733EB1FA0B0440D /* opencv_highgui in Frameworks & Libraries */,
+				B99AF0048348316D5371D2F8 /* opencv_core in Frameworks & Libraries */,
+				6515B3DE9CDF5FB12F645687 /* opencv_legacy in Frameworks & Libraries */,
+				CBF78B51BD9AFF189ACA7357 /* opencv_contrib in Frameworks & Libraries */,
+				AE73BC76B57E7449232702F5 /* opencv_objdetect in Frameworks & Libraries */,
+				EF6645BB4C47FA0A6FC47A21 /* QtGui.framework in Frameworks & Libraries */,
+				809159C6EAF8D43A43D6969D /* QtCore.framework in Frameworks & Libraries */,
 			);
+			name = "Frameworks & Libraries";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FAFE02351C76396C006F0EA8 = {
+		05596AB53D8D521C69802C27 /* OpenCV_Detection */ = {
 			isa = PBXGroup;
 			children = (
-				FAFE02401C76396C006F0EA8 /* OpenCV_Detection */,
-				FAFE023F1C76396C006F0EA8 /* Products */,
+				FB61758D0F0FDA4BA867C3D5 /* Sources */,
+				883D7615C4D2DE3FA1218F12 /* Headers */,
+				7CABE3C80E79AD2B307756D2 /* Sources [qmake] */,
+				ED1E82605DD74B483AF3C982 /* External Frameworks and Libraries */,
+				FAFE02631C78F137006F0EA8 /* Products */,
 			);
-			sourceTree = "<group>";
+			name = OpenCV_Detection;
+			sourceTree = "<Group>";
 		};
-		FAFE023F1C76396C006F0EA8 /* Products */ = {
+		06674E1DE8D3EB6E763DFFDA /* src */ = {
 			isa = PBXGroup;
 			children = (
-				FAFE023E1C76396C006F0EA8 /* OpenCV_Detection */,
+				7EC3C68A81EFFF79B6CA22AC /* main.cpp */,
+				7FB9E2034970538C88275B3B /* FaceRecognition.cpp */,
+			);
+			name = src;
+			sourceTree = "<Group>";
+		};
+		7CABE3C80E79AD2B307756D2 /* Sources [qmake] */ = {
+			isa = PBXGroup;
+			children = (
+				E62CB88424349B45F7C12396 /* OpenCV_Detection.pro */,
+			);
+			name = "Sources [qmake]";
+			sourceTree = "<Group>";
+		};
+		883D7615C4D2DE3FA1218F12 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				F4AF6147B42623F6B3284738 /* src */,
+			);
+			name = Headers;
+			sourceTree = "<Group>";
+		};
+		ED1E82605DD74B483AF3C982 /* External Frameworks and Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				2C39EA5F4C3EE3134F679991 /* opencv_video */,
+				4CFF30FEDCD1214AA7921ECF /* opencv_ml */,
+				C500203842ABE733DB4FA76B /* opencv_imgproc */,
+				7E730E135A848A0FEAADCD9D /* opencv_highgui */,
+				8460E7A556CA32E346510BD9 /* opencv_core */,
+				6CDF004B54E38EE11A292175 /* opencv_legacy */,
+				804CEC106B49DAA2A684BE06 /* opencv_contrib */,
+				2A293A6EA9A01ABD7DAD0007 /* opencv_objdetect */,
+				118895110D9257AE43028713 /* QtGui.framework */,
+				2E20BC4F5FF362AB89A06A6D /* QtCore.framework */,
+			);
+			name = "External Frameworks and Libraries";
+			sourceTree = "<Group>";
+		};
+		F4AF6147B42623F6B3284738 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				563E201091E9BB50D5B53897 /* FaceRecognition.h */,
+				6B6729C1C05203E7A6B57F81 /* recognition_consts.h */,
+			);
+			name = src;
+			sourceTree = "<Group>";
+		};
+		FAFE02631C78F137006F0EA8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAFE02621C78F137006F0EA8 /* OpenCV_Detection.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FAFE02401C76396C006F0EA8 /* OpenCV_Detection */ = {
+		FB61758D0F0FDA4BA867C3D5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				FAFE02411C76396C006F0EA8 /* main.cpp */,
-				FAFE024A1C78A53D006F0EA8 /* FaceRecognition.cpp */,
-				FAFE024B1C78A53D006F0EA8 /* FaceRecognition.h */,
-				FAFE024D1C78A8F9006F0EA8 /* recognition_consts.h */,
+				06674E1DE8D3EB6E763DFFDA /* src */,
 			);
-			path = OpenCV_Detection;
-			sourceTree = "<group>";
+			name = Sources;
+			sourceTree = "<Group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FAFE023D1C76396C006F0EA8 /* OpenCV_Detection */ = {
+		D9FD5C4F30E0401B396AEC1A /* OpenCV_Detection */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FAFE02451C76396C006F0EA8 /* Build configuration list for PBXNativeTarget "OpenCV_Detection" */;
+			buildConfigurationList = 17B3380A4D6A7D415E7F2E1E /* Build configuration list for PBXNativeTarget "OpenCV_Detection" */;
 			buildPhases = (
-				FAFE023A1C76396C006F0EA8 /* Sources */,
-				FAFE023B1C76396C006F0EA8 /* Frameworks */,
-				FAFE023C1C76396C006F0EA8 /* CopyFiles */,
+				D7BA7D76DAB5DD13389D6332 /* Qt Qmake */,
+				A0A52A2ADF7A1E2A99738674 /* Qt Preprocessors */,
+				C29B8785722055ED95EF7B57 /* Build Sources */,
+				2A1043669E6E5A7426EA502A /* Frameworks & Libraries */,
+				3787F99312C85FF0073FD7BA /* Bundle Resources */,
 			);
 			buildRules = (
 			);
@@ -86,197 +160,247 @@
 			);
 			name = OpenCV_Detection;
 			productName = OpenCV_Detection;
-			productReference = FAFE023E1C76396C006F0EA8 /* OpenCV_Detection */;
-			productType = "com.apple.product-type.tool";
+			productReference = FAFE02621C78F137006F0EA8 /* OpenCV_Detection.app */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		FAFE02361C76396C006F0EA8 /* Project object */ = {
+		91B15E841AA80083484172DE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
-				ORGANIZATIONNAME = kosa;
-				TargetAttributes = {
-					FAFE023D1C76396C006F0EA8 = {
-						CreatedOnToolsVersion = 6.4;
-					};
-				};
 			};
-			buildConfigurationList = FAFE02391C76396C006F0EA8 /* Build configuration list for PBXProject "OpenCV_Detection" */;
+			buildConfigurationList = CC82A9286117DFED018F418F /* Build configuration list for PBXProject "OpenCV_Detection" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
-			hasScannedForEncodings = 0;
+			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
 			);
-			mainGroup = FAFE02351C76396C006F0EA8;
-			productRefGroup = FAFE023F1C76396C006F0EA8 /* Products */;
+			mainGroup = 05596AB53D8D521C69802C27 /* OpenCV_Detection */;
+			productRefGroup = FAFE02631C78F137006F0EA8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FAFE023D1C76396C006F0EA8 /* OpenCV_Detection */,
+				D9FD5C4F30E0401B396AEC1A /* OpenCV_Detection */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		3787F99312C85FF0073FD7BA /* Bundle Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Bundle Resources";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A0A52A2ADF7A1E2A99738674 /* Qt Preprocessors */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Qt Preprocessors";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/macbook/Documents/Work/OpenCV_Detection -f 'OpenCV_Detection.xcodeproj/qt_preprocess.mak'";
+		};
+		D7BA7D76DAB5DD13389D6332 /* Qt Qmake */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "Qt Qmake";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/macbook/Documents/Work/OpenCV_Detection -f 'OpenCV_Detection.xcodeproj/qt_makeqmake.mak'";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		FAFE023A1C76396C006F0EA8 /* Sources */ = {
+		C29B8785722055ED95EF7B57 /* Build Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAFE024C1C78A53D006F0EA8 /* FaceRecognition.cpp in Sources */,
-				FAFE02421C76396C006F0EA8 /* main.cpp in Sources */,
+				FD1638E377D97C82BDB438FB /* main.cpp in Build Sources */,
+				85FC8D09BBB106D791FCA6BE /* FaceRecognition.cpp in Build Sources */,
 			);
+			name = "Build Sources";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		FAFE02431C76396C006F0EA8 /* Debug */ = {
+		4B72B24813252891014BCF61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
+				FRAMEWORK_SEARCH_PATHS = (
+					/usr/local/Cellar/qt/4.8.7/lib,
+					/usr/local/Cellar/qt/4.8.7/lib,
+					/usr/local/Cellar/qt/4.8.7/lib,
 				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/Cellar/qt/4.8.7/lib/QtCore.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.7/lib/QtCore.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.7/lib/QtGui.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.7/lib/QtGui.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.7/include,
+					/usr/local/include,
+					.,
+					/usr/local/include,
+					/System/Library/Frameworks/CarbonCore.framework/Headers,
+					"/usr/local/Cellar/qt/4.8.7/mkspecs/macx-xcode",
+				);
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/qt/4.8.7/lib,
+					/usr/local/lib,
+					/usr/local/Cellar/qt/4.8.7/lib,
+				);
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-DQT_NO_DEBUG",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+					"-DQT_SHARED",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-DQT_NO_DEBUG",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+					"-DQT_SHARED",
+				);
+				OTHER_LDFLAGS = (
+					"-headerpad_max_install_names",
+					"-L/usr/local/Cellar/qt/4.8.7/lib",
+					"-F/usr/local/Cellar/qt/4.8.7/lib",
+					"-L/usr/local/lib",
+					"-L/usr/local/Cellar/qt/4.8.7/lib",
+					"-F/usr/local/Cellar/qt/4.8.7/lib",
+				);
+				PRODUCT_NAME = OpenCV_Detection;
 			};
 			name = Debug;
 		};
-		FAFE02441C76396C006F0EA8 /* Release */ = {
+		8C7174830A1E4DCBA0332EC1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = macosx;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				PRODUCT_NAME = OpenCV_Detection;
 			};
 			name = Release;
 		};
-		FAFE02461C76396C006F0EA8 /* Debug */ = {
+		BEC09A62E69C3553534FF35E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					/usr/local/include,
-				);
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
-				OTHER_LDFLAGS = (
-					"-lopencv_video",
-					"-lopencv_ml",
-					"-lopencv_imgproc",
-					"-lopencv_highgui",
-					"-lopencv_core",
-					"-lopencv_legacy",
-					"-lopencv_contrib",
-					"-lopencv_objdetect",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				PRODUCT_NAME = OpenCV_Detection;
 			};
 			name = Debug;
 		};
-		FAFE02471C76396C006F0EA8 /* Release */ = {
+		D70590BEB531B51029F711BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/usr/local/Cellar/qt/4.8.7/lib,
+					/usr/local/Cellar/qt/4.8.7/lib,
+					/usr/local/Cellar/qt/4.8.7/lib,
+				);
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
 				HEADER_SEARCH_PATHS = (
-					"$(inherited)",
-					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/usr/local/Cellar/qt/4.8.7/lib/QtCore.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.7/lib/QtCore.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.7/lib/QtGui.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.7/lib/QtGui.framework/Versions/4/Headers,
+					/usr/local/Cellar/qt/4.8.7/include,
 					/usr/local/include,
+					.,
+					/usr/local/include,
+					/System/Library/Frameworks/CarbonCore.framework/Headers,
+					"/usr/local/Cellar/qt/4.8.7/mkspecs/macx-xcode",
 				);
-				LIBRARY_SEARCH_PATHS = /usr/local/lib;
+				INFOPLIST_FILE = Info.plist;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/Cellar/qt/4.8.7/lib,
+					/usr/local/lib,
+					/usr/local/Cellar/qt/4.8.7/lib,
+				);
+				OTHER_CFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-DQT_NO_DEBUG",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+					"-DQT_SHARED",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-pipe",
+					"-O2",
+					"-Wall",
+					"-W",
+					"-DQT_NO_DEBUG",
+					"-DQT_GUI_LIB",
+					"-DQT_CORE_LIB",
+					"-DQT_SHARED",
+				);
 				OTHER_LDFLAGS = (
-					"-lopencv_video",
-					"-lopencv_ml",
-					"-lopencv_imgproc",
-					"-lopencv_highgui",
-					"-lopencv_core",
-					"-lopencv_legacy",
-					"-lopencv_contrib",
-					"-lopencv_objdetect",
+					"-headerpad_max_install_names",
+					"-L/usr/local/Cellar/qt/4.8.7/lib",
+					"-F/usr/local/Cellar/qt/4.8.7/lib",
+					"-L/usr/local/lib",
+					"-L/usr/local/Cellar/qt/4.8.7/lib",
+					"-F/usr/local/Cellar/qt/4.8.7/lib",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = OpenCV_Detection;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FAFE02391C76396C006F0EA8 /* Build configuration list for PBXProject "OpenCV_Detection" */ = {
+		17B3380A4D6A7D415E7F2E1E /* Build configuration list for PBXNativeTarget "OpenCV_Detection" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FAFE02431C76396C006F0EA8 /* Debug */,
-				FAFE02441C76396C006F0EA8 /* Release */,
+				BEC09A62E69C3553534FF35E /* Debug */,
+				8C7174830A1E4DCBA0332EC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FAFE02451C76396C006F0EA8 /* Build configuration list for PBXNativeTarget "OpenCV_Detection" */ = {
+		CC82A9286117DFED018F418F /* Build configuration list for PBXProject "OpenCV_Detection" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FAFE02461C76396C006F0EA8 /* Debug */,
-				FAFE02471C76396C006F0EA8 /* Release */,
+				4B72B24813252891014BCF61 /* Debug */,
+				D70590BEB531B51029F711BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = FAFE02361C76396C006F0EA8 /* Project object */;
+	rootObject = 91B15E841AA80083484172DE /* Project object */;
 }
