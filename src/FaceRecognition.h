@@ -10,7 +10,6 @@
 #define __OpenCV_Detection__FaceRecognition__
 
 //std
-#include <stdio.h>
 #include <vector>
 
 //opencv
@@ -37,13 +36,23 @@ class CFaceRecognition
     
 public:
                                 CFaceRecognition();
+                                CFaceRecognition(const CFaceRecognition&);
+    CFaceRecognition&           operator=(const CFaceRecognition&);
+    ~CFaceRecognition(){};
     
 public:
     bool                        isValid();
+    
+//    cv::Mat                     getFrame(int iH = 0, int iY = 0);
+    cv::Mat                     recognFrame(cv::Mat frame, int iH = 900, int iY = 600);
     cv::Mat                     getFrame();
     
+    
+public:
+    bool                        init();
+    void                        fastInit();
+    
 private:
-    bool                        _init();
     bool                        _readPreson();
     bool                        _initRecognition();
     bool                        _initCam();

@@ -9,29 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OpenCV_Detection/Detection.h"
-            timestampString = "477602166.26824"
+            filePath = "src/MainFrameAnalyzerThread.cpp"
+            timestampString = "478119878.405998"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "detectio_func()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "OpenCV_Detection/FaceRecognition.cpp"
-            timestampString = "477674751.686569"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
-            landmarkName = "CFaceRecognition::getFrame()"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "CMainFrameAnalyzerThread::thread_proc()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OpenCV_Detection/FaceRecognition.cpp"
-            timestampString = "477674367.562092"
+            filePath = "src/MainFrameAnalyzerThread.cpp"
+            timestampString = "478120133.347941"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
-            landmarkName = "CFaceRecognition::_readPreson()"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "CMainFrameAnalyzerThread::thread_proc()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +41,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OpenCV_Detection/FaceRecognition.cpp"
-            timestampString = "477674376.477453"
+            filePath = "src/RecognThread.cpp"
+            timestampString = "478284083.234579"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "CFaceRecognition::_readPreson()"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "CRecognThread::thread_proc()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -73,13 +57,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OpenCV_Detection/FaceRecognition.cpp"
-            timestampString = "477674397.498197"
+            filePath = "src/RecognThread.cpp"
+            timestampString = "478284083.234579"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "89"
-            endingLineNumber = "89"
-            landmarkName = "CFaceRecognition::_readPreson()"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "CRecognThread::start()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -89,13 +73,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OpenCV_Detection/FaceRecognition.cpp"
-            timestampString = "477674398.621108"
+            filePath = "src/RecognThread.cpp"
+            timestampString = "478284083.234579"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "CFaceRecognition::_readPreson()"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "CRecognThread::thread_proc()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -105,14 +89,14 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OpenCV_Detection/main.cpp"
-            timestampString = "477676039.612294"
+            filePath = "src/CamMainWindow.cpp"
+            timestampString = "478203783.334448"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "main( int argc, const char** argv )"
-            landmarkType = "7">
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "CCamMainWindow::startShow()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -121,13 +105,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OpenCV_Detection/FaceRecognition.cpp"
-            timestampString = "477674970.882877"
+            filePath = "src/CamMainWindow.cpp"
+            timestampString = "478203797.757185"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "149"
-            endingLineNumber = "149"
-            landmarkName = "CFaceRecognition::getFrame()"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "CCamMainWindow::startShow()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

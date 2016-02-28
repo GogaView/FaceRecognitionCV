@@ -5,32 +5,21 @@
 #include <iostream>
 #include <stdio.h>
 
-#include <unistd.h>
-#include "FaceRecognition.h"
+#include <QtCore>
+#include <QtGui>
 
-using namespace std;
-using namespace cv;
+//#include "FaceRecognition.h"
+#include "CamMainWindow.h"
 
-int main( int argc, const char** argv )
+
+int main( int argc, char** argv )
 {
-    CFaceRecognition* face = new CFaceRecognition();
+    QApplication app(argc, argv);
+    CCamMainWindow window;
+//    window.initGui();
     
-    if(face->isValid())
-    {
-        cv::Mat frame;
-        
-        while(true)
-        {
-            frame = face->getFrame();
-            cv::imshow("face",frame);
-            
-//            usleep(1000000);
-            char key = (char) waitKey(1);
-            if(key == 27)
-                break;
-            
-        }
-    }
+    window.show();
     
+    return app.exec();    
     
 }

@@ -21,11 +21,37 @@
 
 CFaceRecognition::CFaceRecognition()
 {
-    m_bIsValid = _init();
+    m_bIsValid = init();
+}
+
+CFaceRecognition::CFaceRecognition(const CFaceRecognition& copy)
+{
+    m_cam = copy.m_cam;
+    m_vFaces = copy.m_vFaces;
+    m_vNames = copy.m_vNames;
+    m_vLables = copy.m_vLables;
+    m_ptrModel = copy.m_ptrModel;
+    m_HaarCascade = copy.m_HaarCascade;
+    m_iWidth = copy.m_iWidth;
+    m_iHeight = copy.m_iHeight;
+    m_bIsValid = copy.m_bIsValid;
 }
 
 
-bool CFaceRecognition::_init()
+CFaceRecognition& CFaceRecognition::operator=(const CFaceRecognition& copy)
+{
+    m_cam = copy.m_cam;
+    m_vFaces = copy.m_vFaces;
+    m_vNames = copy.m_vNames;
+    m_vLables = copy.m_vLables;
+    m_ptrModel = copy.m_ptrModel;
+    m_HaarCascade = copy.m_HaarCascade;
+    m_iWidth = copy.m_iWidth;
+    m_iHeight = copy.m_iHeight;
+    m_bIsValid = copy.m_bIsValid;
+}
+
+bool CFaceRecognition::init()
 {
     if(!_readPreson())
     {
@@ -55,6 +81,12 @@ bool CFaceRecognition::_init()
     
     return true;
     
+}
+
+void CFaceRecognition::fastInit()
+{
+    _initHaarCascade();
+    _initRecognition();
 }
 
 bool CFaceRecognition::_readPreson()
@@ -87,6 +119,9 @@ bool CFaceRecognition::_readPreson()
         
         fclose(imgChk);
         m_vNames.push_back(s);
+        
+//        delete buf;
+//        delete s;
     }
     
     if(m_vFaces.size() == 0)
@@ -136,11 +171,13 @@ bool CFaceRecognition::isValid()
 cv::Mat CFaceRecognition::getFrame()
 {
     cv::Mat frame;
-    
     m_cam >> frame;
     
-//    return frame;
-    
+    return frame;
+}
+
+cv::Mat CFaceRecognition::recognFrame(cv::Mat frame, int iH, int iY)
+{
     cv::Mat original = frame.clone();
     cv::Mat gray;
     
@@ -150,7 +187,7 @@ cv::Mat CFaceRecognition::getFrame()
     
     std::vector< cv::Rect_<int> > faces;
     
-    m_HaarCascade.detectMultiScale(gray, faces, 1.1, 3, /*CASCADE_FIND_BIGGEST_OBJECT*/cv::CASCADE_DO_ROUGH_SEARCH);
+    m_HaarCascade.detectMultiScale(gray, faces, 1.1, 3, cv::CASCADE_FIND_BIGGEST_OBJECT);
     
     for(int i = 0; i < faces.size(); i++)
     {
@@ -185,9 +222,8 @@ cv::Mat CFaceRecognition::getFrame()
         
         putText(original, box_text, cv::Point(pos_x, pos_y), cv::FONT_HERSHEY_PLAIN, 1.0, CV_RGB(0,255,0), 2.0);
     }
-
-    QImage img = QImage((uchar*) original.data, original.cols, original.rows, original.step, QImage::Format_RGB888);
-    
+    if(iH !=0 && iY != 0)
+        cv::resize(original, original, cv::Size(iH, iY), 1.0, 1.0, cv::INTER_CUBIC);
     return original;
 }
 
