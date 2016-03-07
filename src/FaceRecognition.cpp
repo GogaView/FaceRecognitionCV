@@ -49,6 +49,7 @@ CFaceRecognition& CFaceRecognition::operator=(const CFaceRecognition& copy)
     m_iWidth = copy.m_iWidth;
     m_iHeight = copy.m_iHeight;
     m_bIsValid = copy.m_bIsValid;
+    return *this;
 }
 
 bool CFaceRecognition::init()
@@ -189,7 +190,7 @@ cv::Mat CFaceRecognition::recognFrame(cv::Mat frame, int iH, int iY)
     
     m_HaarCascade.detectMultiScale(gray, faces, 1.1, 3, cv::CASCADE_FIND_BIGGEST_OBJECT);
     
-    for(int i = 0; i < faces.size(); i++)
+    for(unsigned int i = 0; i < faces.size(); i++)
     {
         
         cv::Rect face_i = faces[i];

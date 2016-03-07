@@ -5,8 +5,7 @@
 #include <iostream>
 #include <stdio.h>
 
-#include <QtCore>
-#include <QtGui>
+#include <QApplication>
 
 //#include "FaceRecognition.h"
 #include "CamMainWindow.h"

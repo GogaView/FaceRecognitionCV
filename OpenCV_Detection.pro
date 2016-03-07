@@ -1,11 +1,9 @@
-
-
-
-CONFIG += qt
 TEMPLATE = app
+CONFIG += qt
+QT += core gui widgets
 
 LIBS += -L/usr/local/lib
-INCLUDEPATH = /usr/local/include
+INCLUDEPATH += /usr/local/include
 
 
 LIBS += -lopencv_video \
@@ -16,8 +14,8 @@ LIBS += -lopencv_video \
         -lopencv_legacy \
         -lopencv_contrib \
         -lopencv_objdetect \
-        -lboost_system-mt \
-        -lboost_thread-mt
+        -lboost_system \
+        -lboost_thread
 
 
 

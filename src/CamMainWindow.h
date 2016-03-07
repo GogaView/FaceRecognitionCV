@@ -9,10 +9,10 @@
 #ifndef __OpenCV_Detection__MainWindow__
 #define __OpenCV_Detection__MainWindow__
 
-#include <QWidget>
-#include <QLabel>
-#include <QMainWindow>
-#include <QTimer>
+#include <QtWidgets/QWidget>
+#include <QtWidgets/QLabel>
+#include <QtWidgets/QMainWindow>
+#include <QtCore/QTimer>
 
 #include "FaceRecognition.h"
 #include "MainFrameAnalyzerThread.h"

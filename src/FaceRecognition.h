@@ -38,7 +38,6 @@ public:
                                 CFaceRecognition();
                                 CFaceRecognition(const CFaceRecognition&);
     CFaceRecognition&           operator=(const CFaceRecognition&);
-    ~CFaceRecognition(){};
     
 public:
     bool                        isValid();

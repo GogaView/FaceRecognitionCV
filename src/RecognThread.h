@@ -11,40 +11,41 @@
 
 //opencv
 #include <opencv2/opencv.hpp>
-
 //Qt
 #include <QImage>
-
-#ifndef Q_MOC_RUN
-//boost
-#include <boost/thread.hpp>
-#endif
-
 //proj
-#include <FaceRecognition.h>
+#include "FaceRecognition.h"
+//boost
+#include <boost/shared_ptr.hpp>
+#include <boost/noncopyable.hpp>
 
-class CRecognThread
+namespace boost
+{
+class thread;
+}
+typedef boost::shared_ptr<boost::thread> thread_ptr;
+
+class CRecognThread : public boost::noncopyable
 {
     cv::Mat                     m_matOriginFrame;
     QImage                      m_outImage;
-    boost::thread*              m_pThread;
+    thread_ptr                  m_pThread;
     
     bool                        m_bIsPrevComplite;
     
     CFaceRecognition            m_faceRecog;
     
 public:
-                                CRecognThread(const cv::Mat&, const CFaceRecognition);
-    ~CRecognThread();
+    CRecognThread(const cv::Mat&, const CFaceRecognition);
     
-    void                        start();
-    QImage                      getFrame();
+    void    start();
+    QImage  getFrame();
     
-    bool                        isComplite();
-    void                        waitEnd();
+    bool    isComplite();
+    void    waitEnd();
     
 private:
-    void                        thread_proc();
+    void    thread_proc();
 };
 
 #endif /* defined(__OpenCV_Detection__RecognThread__) */

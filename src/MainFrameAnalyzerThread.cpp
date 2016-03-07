@@ -6,9 +6,14 @@
 //
 //
 
+#ifndef Q_MOC_RUN
+//boost
+#include <boost/thread.hpp>
+#endif
+
 #include "MainFrameAnalyzerThread.h"
-
-
+#include "RecognThread.h"
+#include <cassert>
 
 CMainFrameAnalyzerThread::CMainFrameAnalyzerThread()
 {
@@ -17,18 +22,11 @@ CMainFrameAnalyzerThread::CMainFrameAnalyzerThread()
 
 void CMainFrameAnalyzerThread::start()
 {
-    if(m_pThread != 0)
+    if(m_pThread.get() && m_pThread->joinable())
     {
-        if(m_pThread->joinable())
-        {
-            return;
-        }
+        return;
     }
-    
-    m_pThread = new boost::thread(boost::bind(&CMainFrameAnalyzerThread::thread_proc, this));
-    
-    
-    
+    m_pThread = thread_ptr(new boost::thread(boost::bind(&CMainFrameAnalyzerThread::thread_proc, this)));
 }
 
 void CMainFrameAnalyzerThread::thread_proc()
@@ -47,10 +45,10 @@ void CMainFrameAnalyzerThread::thread_proc()
         
         cv::Mat frame = m_faceRecog.getFrame();
         
-        CRecognThread* newThread = new CRecognThread(frame,m_faceRecog);
+        CRecognThread* newThread = new CRecognThread(frame, m_faceRecog);
         newThread->start();
         
-        m_lRecognList.push_back(newThread);
+        m_lRecognList.push_back(recognt_ptr(newThread));
      
 //        m_mutex.unlock();
     }
@@ -66,7 +64,7 @@ QImage CMainFrameAnalyzerThread::getFrame()
     
     if(m_lRecognList.size() != 0)
     {
-        CRecognThread* pTh = m_lRecognList.front();
+        CRecognThread* pTh = m_lRecognList.front().get();
         if(pTh == 0)
         {
             return img;
