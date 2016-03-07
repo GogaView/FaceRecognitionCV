@@ -31,26 +31,16 @@ void CMainFrameAnalyzerThread::start()
 
 void CMainFrameAnalyzerThread::thread_proc()
 {
-    while(true)
+    for(std::size_t i = 0; i < 2; i++)
     {
-        boost::unique_lock<boost::mutex> lock(m_mutex);
-//        m_mutex.lock();
-        
-        if(m_lRecognList.size() >= 2)
-        {
-//            m_mutex.unlock();
-            continue;
-            
-        }
-        
-        cv::Mat frame = m_faceRecog.getFrame();
-        
+        boost::unique_lock<boost::mutex> lock(m_mutex);        
+
+        assert(m_faceRecog.isValid());
+        cv::Mat frame = m_faceRecog.getFrame();        
         CRecognThread* newThread = new CRecognThread(frame, m_faceRecog);
-        newThread->start();
-        
+        newThread->start();        
+
         m_lRecognList.push_back(recognt_ptr(newThread));
-     
-//        m_mutex.unlock();
     }
 }
 
@@ -62,10 +52,10 @@ QImage CMainFrameAnalyzerThread::getFrame()
     
 //    m_mutex.lock();
     
-    if(m_lRecognList.size() != 0)
+    if(!m_lRecognList.empty())
     {
         CRecognThread* pTh = m_lRecognList.front().get();
-        if(pTh == 0)
+        if(!pTh)
         {
             return img;
         }

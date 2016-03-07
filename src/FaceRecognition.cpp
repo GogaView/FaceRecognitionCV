@@ -57,24 +57,28 @@ bool CFaceRecognition::init()
     if(!_readPreson())
     {
         std::cout << "ERROR: Can not load persons params!" << std::endl;
+        assert(false);
         return false;
     }
     
     if(!_initRecognition())
     {
         std::cout << "ERROR: Can not init recognitions params!" << std::endl;
+        assert(false);
         return false;
     }
-    
+
     if(!_initCam())
     {
         std::cout << "ERROR: Can not load cam!" << std::endl;
+        assert(false);
         return false;
     }
     
     if(!_initHaarCascade())
     {
         std::cout << "ERROR: Can not load Haar cascades!" << std::endl;
+        assert(false);
         return false;
     }
     
@@ -172,18 +176,21 @@ bool CFaceRecognition::isValid()
 cv::Mat CFaceRecognition::getFrame()
 {
     cv::Mat frame;
+    assert(frame.empty());
     m_cam >> frame;
+    assert(!frame.empty());
     
     return frame;
 }
 
 cv::Mat CFaceRecognition::recognFrame(cv::Mat frame, int iH, int iY)
 {
+    assert(iH > 0 && iY > 0);
     cv::Mat original = frame.clone();
     cv::Mat gray;
-    
+
     cvtColor(original, gray, CV_BGR2GRAY);
-    
+
     equalizeHist(gray, gray);
     
     std::vector< cv::Rect_<int> > faces;
